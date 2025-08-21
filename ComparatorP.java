@@ -27,6 +27,18 @@ public class ComparatorP {
 		
 		List<Integer> descList2 = list.stream().sorted(comparatorD).toList(); 	//using Comparator and compare() method for custom sorting
 		System.out.println(descList2);
+		
+		List<String> students = Arrays.asList("Suresh", "Gopal", "Ravi", "Avi");
+		
+		Comparator<String> nameCom = new Comparator<String>() {
+			@Override
+			public int compare(String o1, String o2) {
+				if(o1.length() < o2.length()) return -1;
+				else return 1;
+			}};
+		
+		List<String> nameLen = students.stream().sorted(nameCom).toList();
+		System.out.println(nameLen);
 	}
 
 }
