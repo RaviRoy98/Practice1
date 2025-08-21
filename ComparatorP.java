@@ -39,6 +39,7 @@ public class ComparatorP {
 		
 		List<String> nameLen = students.stream().sorted(nameCom).toList();
 		System.out.println(nameLen);
+		System.out.println("Branch added");
 	}
 
 }
